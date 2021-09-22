@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet"/>
+    <script defer src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+        <form action="/" method="POST" id="fillup">
+            <input id="write" name="write" placeholder="Musing"></input>
+            <input id="yourname" name="yourname" placeholder="Your Name"></input>
+            <button id="save" type="submit">SAVE</button><button id="cancel">CANCEL</button>
+        </form>
+
+        <div id="head">
+            <p>I feel the vibe between us</p>
+            <p>can you feel it too</p>
+        </div>
+
+        <button id="addbtn">&#43;</button>
+
+        <div id="main">
+            {{!-- <div class="box">
+                <p class="comments">This is a comment a simple comment and whtat i can say about this.</p>
+                <p class="names">~ Name</p>
+            </div> --}}
+            
+            {{#each dynamicComment}}
+                <div class="box">
+                    <p class="comments">{{comment}}</p>
+                    <p class="names">~ {{name}}</p>
+                </div>
+            {{/each}}   
+        </div>
+        
+    </div>
+</body>
+</html>
